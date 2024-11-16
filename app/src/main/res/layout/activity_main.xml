@@ -6,6 +6,20 @@
     android:layout_height="match_parent"
     tools:context=".activity.MainActivity">
 
+    <!-- Toolbar para o título e botão de voltar -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFD400"
+        android:elevation="4dp"
+        android:minHeight="?attr/actionBarSize"
+        app:title="Minhas Compras"
+        app:titleTextColor="@android:color/white"
+        app:navigationIcon="@drawable/ic_back_arrow" />
+
+    <!-- RecyclerView para a lista de produtos -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/produtos"
         android:layout_width="0dp"
@@ -16,6 +30,8 @@
         android:layout_marginBottom="2dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintVertical_bias="1.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

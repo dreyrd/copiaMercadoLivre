@@ -1,61 +1,70 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/cardView"
     android:layout_width="match_parent"
-    android:layout_height="200dp"
-    android:layout_margin="6dp"
-    app:cardElevation="10sp"
-    tools:layout_editor_absoluteX="1dp"
-    tools:layout_editor_absoluteY="200dp">
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
 
+        <!-- Data do Pedido -->
         <TextView
             android:id="@+id/dataPedida"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="30 de agosto"
-            android:textSize="16dp"
-            android:textStyle="bold" />
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#333333" />
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="6dp">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="8dp">
 
+            <!-- Imagem do Produto -->
             <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:id="@+id/imagemProduto"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="12dp"
+                android:scaleType="centerCrop"
                 app:srcCompat="@drawable/zoom" />
 
+            <!-- Informações do Pedido -->
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:orientation="vertical">
 
+                <!-- Status do Pedido -->
                 <TextView
                     android:id="@+id/status"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="A caminho"
+                    android:textSize="14sp"
                     android:textColor="@color/verde"
-                    android:text="A caminho" />
+                    android:textStyle="bold" />
 
+                <!-- Previsão ou Data de Entrega -->
                 <TextView
                     android:id="@+id/previsao"
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Chegará quinta-feira dia 2 de setembro" />
+                    android:text="Chegará quinta-feira dia 2 de setembro"
+                    android:textSize="12sp"
+                    android:textColor="#666666"
+                    android:paddingTop="4dp" />
             </LinearLayout>
-
         </LinearLayout>
-
     </LinearLayout>
 </androidx.cardview.widget.CardView>
